@@ -65,7 +65,7 @@ INTERNAL_IPS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "movies/reactfrotend/html"],
+        'DIRS': [BASE_DIR / "movies/react-frontend/html"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
