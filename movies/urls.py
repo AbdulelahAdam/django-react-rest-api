@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", TemplateView.as_view(template_name="base.html")),
+    path("", TemplateView.as_view(template_name="index.html")),
  #   path('hello/', include('myapp.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
     path('movies/', views.movie_list),
