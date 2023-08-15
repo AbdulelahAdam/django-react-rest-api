@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+pillow = "==5.0.0"
 
 [dev-packages]
 

@@ -44,6 +44,7 @@ class MovieList extends React.Component {
           <table border="1">
             <thead>
               <tr>
+                <th>Poster</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Year</th>
@@ -51,7 +52,8 @@ class MovieList extends React.Component {
             </thead>
             {items.map((item) => (
               <tbody key={item.id}>
-                <tr>
+                <tr style={{ textAlign: "center" }}>
+                  <td><img src={item.poster} width="258px" height="387px" alt="" /></td>
                   <td>{item.name}</td>
                   <td>{item.description}</td>
                   <td>{item.year}</td>

@@ -25,7 +25,7 @@ def movies_list_id(request, id):
   try:
     movie = Movie.objects.get(id=id)
   except Movie.DoesNotExist:
-    return JsonResponse(status=status.HTTP_404_NOT_FOUND)
+    return JsonResponse("error: not found", safe=False)
       
   if request.method == 'GET':
     serializer = MovieSerializer(movie)
