@@ -37,7 +37,7 @@ def movies_list_id(request, id):
     if serializer.is_valid():
       serializer.save()
       return JsonResponse(serializer.data)
-    return JsonResponse(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+    return JsonResponse(serializer.date, status=status.HTTP_400_BAD_REQUEST)
 
   elif request.method == 'DELETE':
     movie.delete()
