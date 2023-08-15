@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from .models import Movie
 from .serializers import MovieSerializer
 from rest_framework.decorators import api_view
-#from rest_framework.response import Response
+from rest_framework.response import Response
 from rest_framework import status
 
 
@@ -18,7 +18,8 @@ def movie_list(request):
     serializer = MovieSerializer(data=request.data)
     if serializer.is_valid():
       serializer.save()
-      return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+      return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET','PUT', 'DELETE'])
 def movies_list_id(request, id):

@@ -41,19 +41,19 @@ class MovieList extends React.Component {
     } else {
       return (
         <center>
-          <table border="1">
+          <table className="table table-striped table-bordered table-dark ">
             <thead>
-              <tr>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Year</th>
+              <tr style={{ textAlign: "center" }}>
+                <th scope="col">Poster</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Year</th>
               </tr>
             </thead>
             {items.map((item) => (
               <tbody key={item.id}>
                 <tr style={{ textAlign: "center" }}>
-                  <td><img src={item.poster} width="258px" height="387px" alt="" /></td>
+                  <td scope="row"><img src={item.poster} className="img-fluid" alt={item.name} /></td>
                   <td>{item.name}</td>
                   <td>{item.description}</td>
                   <td>{item.year}</td>
