@@ -13,4 +13,5 @@ REST API that lists movies of different genres and release years and then consum
 
 # Same Response in Frontend
 
-![Screenshot_8](https://github.com/AbdulelahAdam/django-react-rest-api/assets/58626327/83df1d58-7b52-459e-8b68-df9fcb69fda8)
+
+![InkedScreenshot_8](https://github.com/AbdulelahAdam/django-react-rest-api/assets/58626327/5a69795b-a38d-44f5-b710-0001dc415e79)
